@@ -47,12 +47,6 @@ table {
     border-spacing: 0;
 }
 
-button {
-    line-height: 48px;
-    padding: 0px 16px;
-    border-radius: 1px;
-}
-
 
 
 header {
@@ -77,13 +71,30 @@ header {
     .nav-header {
         display: flex;
         align-items: center;
-        gap: 25px;
-        a {
+        a , img{
             color: #151515;
+            margin-left: 15px;
         }
-        img {
-            margin-right: 5px;
-            margin-top: 5px; 
+        
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #ffffff;
+            border: none;
+            height: 35px;
+            width: 20px;
+            margin-left: 25px;
+            img{
+                margin-left: 15px;
+            } 
+            span {
+                font-size: 0.9rem;
+                font-weight: 400;
+                margin-top: 2.5px;
+                color: #4f4f4f;
+            }
         }
     }
     .list-header {
