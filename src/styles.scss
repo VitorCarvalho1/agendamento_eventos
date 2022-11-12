@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -9,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
@@ -19,17 +23,18 @@ time, mark, audio, video {
     font-size: 100%;
     vertical-align: baseline;
     text-decoration: none;
-    font-family: 'Poppins, san-serif';
+    font-family: 'Poppins' , san-serif;
 }
 
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
 body {
     line-height: 1;
+    overflow-x: hidden;
 }
 ol, ul {
     list-style: none;
@@ -49,6 +54,38 @@ table {
 
 
 
+
+
+
+html, main {
+  width: 100vw;
+  height: 100vh;
+}
+
+
+:root {
+  --background-tabs: #ffffff;
+  --green-title:  rgba(78, 169, 38, 0.65);
+  --green-status: #5DE05B;
+  --title-card: #000000;
+  --time-date: #525252;
+  --icons: #545454;
+  --placeholder: rgba(123, 119, 119, 0.75);
+  --forgot-password: rgba(0, 0, 0, 0.62);
+  --btn: #14842D;
+  --btn-cancel: #E8E3E3;
+  --line-bottom: #4EA926;
+  --table-background: #14842D;
+  --table-background-tuplas: rgba(78, 169, 38, 0.2);
+  --card-event: #14842D;
+  --card-variant: #DCE4D8;
+  --card-variant-2: #ffffff;
+  --pagination: #14842D;
+  --border-card:  rgba(0, 0, 0, 0.25);
+  --background-top-card: rgba(145, 227, 109, 0.28);
+  --background-btn-status: #5DE05B;
+}
+
 header {
     display:flex;
     justify-content: space-between;
@@ -62,7 +99,7 @@ header {
         margin-left: 72px;
         gap: 1rem;
         h1 {
-            color: hsla(102, 65%, 43%, 0.514);
+            color: var(--green-title);
             font-weight: bold;
             font-size: 1.8rem;
         }
@@ -75,7 +112,7 @@ header {
             color: #151515;
             margin-left: 15px;
         }
-        
+
         button {
             display: flex;
             align-items: center;
@@ -86,14 +123,17 @@ header {
             height: 35px;
             width: 20px;
             margin-left: 25px;
+
             img{
                 margin-left: 15px;
-            } 
+            }
             span {
                 font-size: 0.9rem;
-                font-weight: 400;
+                font-weight: 600;
                 margin-top: 2.5px;
                 color: #4f4f4f;
+                line-height: 22px;
+                margin-bottom: 3px;
             }
         }
     }
@@ -101,4 +141,10 @@ header {
         margin-right: 72px;
     }
 }
+
+
+
+
+
+
 
