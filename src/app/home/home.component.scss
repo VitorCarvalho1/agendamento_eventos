@@ -1,13 +1,20 @@
-@media (min-width: 864px) and (max-width: 1152px) {
+@media (min-width: 864px) and (max-width: 1152px), (min-width: 768px) and (max-width: 1366px) {
   .card {
     width: 310px !important;
     height: 335px !important;
+    .align-content-card-top{
+      img {
+        
+      }
+    }
     .card-top {
       width: 310px !important;
       height: 150px !important;
       .align-btn-card-top {
         button {
-          
+          width: 100px !important;
+          font-size: 12.3px !important;
+          height: 23px !important;
         }
       }
     }
@@ -24,15 +31,20 @@
 
 }
 
+
+
+
+
 .align-content {
   display: flex;
   justify-content: flex-end;
-  margin-right: 49px;
+  margin-right: 81px;
   margin-top: 10px;
   margin-bottom: 10px;
   .align-btn-register-event {
     position: relative;
       button {
+        cursor: pointer;
         width: 160px;
         height: 40px;
         border: none;
