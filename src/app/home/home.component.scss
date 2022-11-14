@@ -1,15 +1,10 @@
 @media (min-width: 864px) and (max-width: 1152px), (min-width: 768px) and (max-width: 1366px) {
   .card {
     width: 310px !important;
-    height: 335px !important;
-    .align-content-card-top{
-      img {
-        
-      }
-    }
+    height: 330px !important;
     .card-top {
       width: 310px !important;
-      height: 150px !important;
+      height: 140px !important;
       .align-btn-card-top {
         button {
           width: 100px !important;
@@ -24,14 +19,11 @@
     .date, .time {
       font-size: 14px !important;
     }
-    .descricao-event {
+    .align-descricao-event {
       font-size: 12px !important;
     }
   }
-
 }
-
-
 
 
 
@@ -96,18 +88,22 @@
         height: 166px;
         background-color: var(--background-top-card);
         .align-btn-card-top{
+          display: flex;
+          justify-content: space-around;
+          gap: 8.5rem;
           button {
             width: 134px;
             height: 28px;
             border-radius: 8px;
             border: none;
             background-color: var(--background-btn-status);
-            margin-top: 14px;
-            margin-left: 20px;
             font-weight: 400;
             font-size: 16px;
             line-height: 19px;
             color: #ffffff;
+          }
+          button, img {
+            margin-top: 14px;
           }
         }
       }
@@ -134,7 +130,7 @@
           }
         }
       }
-      .descricao-event {
+      .align-descricao-event {
         display: flex;
         flex-direction: column;
         gap: 14px;
@@ -145,3 +141,24 @@
   }
 }
 
+footer {
+  .align-pagination {
+    display: flex;
+    justify-content: center;
+    margin: 29px;
+    gap: 16px;
+    button {
+      cursor: pointer;
+      width: 35px;
+      height: 40px;
+      background-color: var(--pagination);
+      border: none;
+      border-radius: 8px;
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 29px;
+      text-align: center;
+    }
+  }
+}
