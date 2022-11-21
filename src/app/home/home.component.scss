@@ -1,147 +1,49 @@
-@media (min-width: 864px) and (max-width: 1152px), (min-width: 768px) and (max-width: 1366px) {
-  .card {
-    width: 310px !important;
-    height: 330px !important;
-    .card-top {
-      width: 310px !important;
-      height: 140px !important;
-      .align-btn-card-top {
-        button {
-          width: 100px !important;
-          font-size: 12.3px !important;
-          height: 23px !important;
-        }
-      }
-    }
-    h1 {
-      font-size: 14px !important;
-    }
-    .date, .time {
-      font-size: 14px !important;
-    }
-    .align-descricao-event {
-      font-size: 12px !important;
-    }
-  }
-}
+// @media (min-width: 864px) and (max-width: 1152px), (min-width: 768px) and (max-width: 1366px) {
+//   .card {
+//     width: 310px !important;
+//     height: 330px !important;
+//     .card-top {
+//       width: 310px !important;
+//       height: 140px !important;
+//       .align-btn-card-top {
+//         button {
+//           width: 100px !important;
+//           font-size: 12.3px !important;
+//           height: 23px !important;
+//         }
+//       }
+//     }
+//     h1 {
+//       font-size: 14px !important;
+//     }
+//     .date, .time {
+//       font-size: 14px !important;
+//     }
+//     .align-descricao-event {
+//       font-size: 12px !important;
+//     }
+//   }
+// }
 
-
-
-.align-content {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 81px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  .align-btn-register-event {
-    position: relative;
-      button {
-        cursor: pointer;
-        width: 160px;
-        height: 40px;
-        border: none;
-        border-radius: 15px;
-        color: #ffffff;
-        background-color: var(--btn);
-        text-align: center;
-        img {
-          position: absolute;
-          left: 7px;
-          top: 13px;
-      }
+main{
+  .container{
+    .main-header{
+      display: flex;
+      justify-content: flex-end;
+      padding: 16px 0px;
     }
-  }
-}
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  max-width: 1920px;
-  .align-cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    width: 1325px;
-    height: 100%;
-    margin-right: 72px;
-    margin-left: 72px;
-    .card {
-      width: 415px;
-      height: 399px;
-      border: 1px solid var(--border-card);
-      border-radius: 8px;
-      .align-content-card-top{
-        display: flex;
-        img {
-          cursor: pointer;
-          margin-top: 13px;
-          margin-left: 80px;
-        }
-      }
-      .card-top {
-        width: 415px;
-        height: 166px;
-        background-color: var(--background-top-card);
-        .align-btn-card-top{
-          display: flex;
-          justify-content: space-around;
-          gap: 8.5rem;
-          button {
-            width: 134px;
-            height: 28px;
-            border-radius: 8px;
-            border: none;
-            background-color: var(--background-btn-status);
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 19px;
-            color: #ffffff;
-          }
-          button, img {
-            margin-top: 14px;
-          }
-        }
-      }
-      h1 {
-        font-weight: 700;
-        font-size: 22px;
-        line-height: 27px;
-        margin-top: 19px;
-        margin-left: 24.95px;
-      }
-      .align-content-card {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 20px;
-        margin-left: 24.95px;
-        margin-top: 21px;
-        .date, .time {
-          display: flex;
-          flex-direction: column;
-          span {
-            margin-top: 8px;
-            color: var(--time-date);
-          }
-        }
-      }
-      .align-descricao-event {
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-        margin-top: 21px;
-        margin-left: 27.73px;
-      }
+    .s-cards{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
     }
   }
 }
 
 footer {
+  padding-bottom: 24px;
   .align-pagination {
     display: flex;
     justify-content: center;

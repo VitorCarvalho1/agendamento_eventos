@@ -1,8 +1,33 @@
 
-@media (min-width: 1080px) and (max-width: 1920px) {
-  
+@media (min-width: 1080px) and (max-width: 1920px) { 
+  .field-name {
+    padding-left: 8px !important;
+    width: 450px !important;
+  }
+
+  .field-funcao {
+    width: 400px !important;
+  }
+  .field-instituicao {
+    width: 300px !important;
+  }
+  .align-icons  {
+    
+    img {
+      width: 390px !important;
+    }
+  }
+
+  .align-text {
+    width: 23px;
+  }
 }
 
+@media (min-width: 768px) and (max-width: 1366px) {
+  .align-btn-back-and-new-user {
+    gap: 760px !important;
+  }
+}
 
 
 body {
@@ -10,16 +35,21 @@ body {
   height: 100vh;
 }
 
+
+
+
 .align-btn-back-and-new-user {
   display: flex;
-  justify-content: space-evenly;
-  gap: 770px;
+  justify-content: space-around;
+  gap: 1160px;
+  width: 100%;
   .align-back-to-home {
     display: flex;
     align-items: center;
     gap: 12px;
     margin-top: 25px;
-    .back-to-home {
+    .back-to-home, img {
+      cursor: pointer;
       color: black;
     }
   }
@@ -28,6 +58,9 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+    .new-user, img {
+      cursor: pointer;
+    }
   }
 }
 
@@ -65,10 +98,7 @@ body {
       .tuplas-table-background {
         background-color: var(--table-background-tuplas);
       }
-      .field-name {
-        
-      }
-    }
+}
     .align-icons {
       display: flex;
       justify-content: flex-end;

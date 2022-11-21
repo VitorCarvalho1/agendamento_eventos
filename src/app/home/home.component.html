@@ -1,309 +1,78 @@
 
-<body>
-    <header>
-        <div class="imgHome">
-            <img src="./../../assets/logo.png" alt="logo-fnst">
-            <h1>Home</h1>
-        </div>
-        <section class="list-header">
-            <nav class="nav-header">
-                <img src="assets/home.svg"><a routerLink="/">Home</a>
-                <img src="assets/usuario.svg"><a routerLink="/tabela-adm">Usuários</a>
-                <img src="assets/historico.svg"><a>Histórico alteração</a>
-                <img src="assets/calendario.svg"><a>Calendário</a>
-                <button>
-                    <img src="assets/sair.svg">
-                    <span>Sair</span>
-                </button>
-            </nav>
-        </section>
-    </header>
+<header>
+  <div class="container">
+    <div class="imgHome">
+        <img src="./../../assets/logo.png" alt="logo-fnst">
+        <h1>Home</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a routerLink="/"><img src="assets/home.svg">Home</a></li>
+        <li><a routerLink="/tabela-adm"><img src="assets/usuario.svg">Usuários</a></li>
+        <li><a routerLink="/"><img src="assets/historico.svg">Histórico alteração</a></li>
+        <li><a routerLink="/"><img src="assets/calendario.svg">Calendário</a></li>
+        <li><a routerLink="/"><img src="assets/sair.svg">Sair</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-    <main>
-      <div class="align-content">
-        <div class="align-btn-register-event">
-            <button>
-              <img src="assets/cadastro.svg">
-              Cadastrar Eventos
-            </button>
+<main>
+  <div class="container">
+    <div class="main-header">
+      <a class="btn btn-primary">
+        <img src="assets/cadastro.svg">
+        Cadastrar Eventos
+      </a>
+    </div>
+
+    <section class="s-cards">
+      <div class="card" *ngFor="let card of agendamentos">
+        <div class="card-header">
+          <div class="status-options">
+            <span [ngClass]="{'status': true, 'status-andamento': card.status == 'Em andamento'}">{{card.status}}</span>
+            <img src="assets/charm_menu-meatball.svg">
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="title">
+            <h6>{{card.title}}</h6>
+            <img src="assets/edit-card.svg">
+          </div>
+  
+          <ul class="info">
+            <li>
+              <img src="assets/data.svg" alt="">
+              <div class="text">
+                <p>{{card.data}}</p>
+                <span>Data</span>
+              </div>
+            </li>
+            <li>
+              <img src="assets/time.svg" alt="">
+              <div class="text">
+                <p>{{card.horario_inicio}} - {{card.horario_fim}}</p>
+                <span>Horário</span>
+              </div>
+            </li>
+          </ul>
+  
+          <div class="endereco">
+            <p>{{card.endereco}}</p>
+            <p>Ginásio entrada na porta dos fundos</p>
+          </div>
         </div>
       </div>
+    </section>
+  </div>
+</main>
 
-      <section class="container">
-            <div class="align-cards">
-              <div class="card">
-                <div class="card-top">
-                  <div class="align-btn-card-top">
-                    <button>Em andamento</button>
-                    <img src="assets/charm_menu-meatball.svg">
-                  </div>
-                </div>
-                <div class="align-content-card-top">
-                  <h1>Semana da FETEC AGRO</h1>
-                  <img src="assets/edit-card.svg">
-                </div>
-                <div class="align-content-card">
-                    <img src="assets/data.svg">
-                  <div class="date">
-                    <p>24/04/2023</p>
-                    <span>Data</span>
-                  </div>
-                    <img src="assets/time.svg">
-                  <div class="time">
-                    <p>10:30 - 22h00</p>
-                    <span>Horário</span>
-                  </div>
-                </div>
-                <div class="align-descricao-event">
-                  <p class="descricao-card-event">Avenida Shunji Nishimuta, Empresarial, 4521</p>
-                  <p class="descricao-card-event">Ginásio entrada na porta dos fundos</p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-top">
-                  <div class="align-btn-card-top">
-                    <button>Em andamento</button>
-                    <img src="assets/charm_menu-meatball.svg">
-                  </div>
-                </div>
-                <div class="align-content-card-top">
-                  <h1>Semana da FETEC AGRO</h1>
-                  <img src="assets/edit-card.svg">
-                </div>
-                <div class="align-content-card">
-                    <img src="assets/data.svg">
-                  <div class="date">
-                    <p>24/04/2023</p>
-                    <span>Data</span>
-                  </div>
-                    <img src="assets/time.svg">
-                  <div class="time">
-                    <p>10:30 - 22h00</p>
-                    <span>Horário</span>
-                  </div>
-                </div>
-                <div class="align-descricao-event">
-                  <p class="descricao-card-event">Avenida Shunji Nishimuta, Empresarial, 4521</p>
-                  <p class="descricao-card-event">Ginásio entrada na porta dos fundos</p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-top">
-                  <div class="align-btn-card-top">
-                    <button>Em andamento</button>
-                    <img src="assets/charm_menu-meatball.svg">
-                  </div>
-                </div>
-                <div class="align-content-card-top">
-                  <h1>Semana da FETEC AGRO</h1>
-                  <img src="assets/edit-card.svg">
-                </div>
-                <div class="align-content-card">
-                    <img src="assets/data.svg">
-                  <div class="date">
-                    <p>24/04/2023</p>
-                    <span>Data</span>
-                  </div>
-                    <img src="assets/time.svg">
-                  <div class="time">
-                    <p>10:30 - 22h00</p>
-                    <span>Horário</span>
-                  </div>
-                </div>
-                <div class="align-descricao-event">
-                  <p class="descricao-card-event">Avenida Shunji Nishimuta, Empresarial, 4521</p>
-                  <p class="descricao-card-event">Ginásio entrada na porta dos fundos</p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-top">
-                  <div class="align-btn-card-top">
-                    <button>Em andamento</button>
-                    <img src="assets/charm_menu-meatball.svg">
-                  </div>
-                </div>
-                <div class="align-content-card-top">
-                  <h1>Semana da FETEC AGRO</h1>
-                  <img src="assets/edit-card.svg">
-                </div>
-                <div class="align-content-card">
-                    <img src="assets/data.svg">
-                  <div class="date">
-                    <p>24/04/2023</p>
-                    <span>Data</span>
-                  </div>
-                    <img src="assets/time.svg">
-                  <div class="time">
-                    <p>10:30 - 22h00</p>
-                    <span>Horário</span>
-                  </div>
-                </div>
-                <div class="align-descricao-event">
-                  <p class="descricao-card-event">Avenida Shunji Nishimuta, Empresarial, 4521</p>
-                  <p class="descricao-card-event">Ginásio entrada na porta dos fundos</p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-top">
-                  <div class="align-btn-card-top">
-                    <button>Em andamento</button>
-                    <img src="assets/charm_menu-meatball.svg">
-                  </div>
-                </div>
-                <div class="align-content-card-top">
-                  <h1>Semana da FETEC AGRO</h1>
-                  <img src="assets/edit-card.svg">
-                </div>
-                <div class="align-content-card">
-                    <img src="assets/data.svg">
-                  <div class="date">
-                    <p>24/04/2023</p>
-                    <span>Data</span>
-                  </div>
-                    <img src="assets/time.svg">
-                  <div class="time">
-                    <p>10:30 - 22h00</p>
-                    <span>Horário</span>
-                  </div>
-                </div>
-                <div class="align-descricao-event">
-                  <p class="descricao-card-event">Avenida Shunji Nishimuta, Empresarial, 4521</p>
-                  <p class="descricao-card-event">Ginásio entrada na porta dos fundos</p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-top">
-                  <div class="align-btn-card-top">
-                    <button>Em andamento</button>
-                    <img src="assets/charm_menu-meatball.svg">
-                  </div>
-                </div>
-                <div class="align-content-card-top">
-                  <h1>Semana da FETEC AGRO</h1>
-                  <img src="assets/edit-card.svg">
-                </div>
-                <div class="align-content-card">
-                    <img src="assets/data.svg">
-                  <div class="date">
-                    <p>24/04/2023</p>
-                    <span>Data</span>
-                  </div>
-                    <img src="assets/time.svg">
-                  <div class="time">
-                    <p>10:30 - 22h00</p>
-                    <span>Horário</span>
-                  </div>
-                </div>
-                <div class="align-descricao-event">
-                  <p class="descricao-card-event">Avenida Shunji Nishimuta, Empresarial, 4521</p>
-                  <p class="descricao-card-event">Ginásio entrada na porta dos fundos</p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-top">
-                  <div class="align-btn-card-top">
-                    <button>Em andamento</button>
-                    <img src="assets/charm_menu-meatball.svg">
-                  </div>
-                </div>
-                <div class="align-content-card-top">
-                  <h1>Semana da FETEC AGRO</h1>
-                  <img src="assets/edit-card.svg">
-                </div>
-                <div class="align-content-card">
-                    <img src="assets/data.svg">
-                  <div class="date">
-                    <p>24/04/2023</p>
-                    <span>Data</span>
-                  </div>
-                    <img src="assets/time.svg">
-                  <div class="time">
-                    <p>10:30 - 22h00</p>
-                    <span>Horário</span>
-                  </div>
-                </div>
-                <div class="align-descricao-event">
-                  <p class="descricao-card-event">Avenida Shunji Nishimuta, Empresarial, 4521</p>
-                  <p class="descricao-card-event">Ginásio entrada na porta dos fundos</p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-top">
-                  <div class="align-btn-card-top">
-                    <button>Em andamento</button>
-                    <img src="assets/charm_menu-meatball.svg">
-                  </div>
-                </div>
-                <div class="align-content-card-top">
-                  <h1>Semana da FETEC AGRO</h1>
-                  <img src="assets/edit-card.svg">
-                </div>
-                <div class="align-content-card">
-                    <img src="assets/data.svg">
-                  <div class="date">
-                    <p>24/04/2023</p>
-                    <span>Data</span>
-                  </div>
-                    <img src="assets/time.svg">
-                  <div class="time">
-                    <p>10:30 - 22h00</p>
-                    <span>Horário</span>
-                  </div>
-                </div>
-                <div class="align-descricao-event">
-                  <p class="descricao-card-event">Avenida Shunji Nishimuta, Empresarial, 4521</p>
-                  <p class="descricao-card-event">Ginásio entrada na porta dos fundos</p>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-top">
-                  <div class="align-btn-card-top">
-                    <button>Em andamento</button>
-                    <img src="assets/charm_menu-meatball.svg">
-                  </div>
-                </div>
-                <div class="align-content-card-top">
-                  <h1>Semana da FETEC AGRO</h1>
-                  <img src="assets/edit-card.svg">
-                </div>
-                <div class="align-content-card">
-                    <img src="assets/data.svg">
-                  <div class="date">
-                    <p>24/04/2023</p>
-                    <span>Data</span>
-                  </div>
-                    <img src="assets/time.svg">
-                  <div class="time">
-                    <p>10:30 - 22h00</p>
-                    <span>Horário</span>
-                  </div>
-                </div>
-                <div class="align-descricao-event">
-                  <p class="descricao-card-event">Avenida Shunji Nishimuta, Empresarial, 4521</p>
-                  <p class="descricao-card-event">Ginásio entrada na porta dos fundos</p>
-                </div>
-              </div>
-            </div>
-      </section>
-    </main>
-
-    <footer>
-      <section class="align-pagination">
-          <img src="assets/left-icon-next.svg">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <img src="assets/right-icon-next.svg">
-      </section>
-    </footer>
-
-</body>
-
+<footer>
+  <section class="align-pagination">
+      <img src="assets/left-icon-next.svg">
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <img src="assets/right-icon-next.svg">
+  </section>
+</footer>
