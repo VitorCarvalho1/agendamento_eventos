@@ -37,7 +37,7 @@ body {
     thead {
       height: 35px;
       background-color: var(--color-primary);
-      tr {  
+      tr {
         th{
           padding-left: 10px;
           text-align: left;
@@ -52,14 +52,16 @@ body {
       tr {
         td {
           height: 20px;
-          line-height: 45px; 
+          line-height: 45px;
           padding-left: 10px;
         }
         td:nth-child(4){
           width: 60px;
           img {
-            margin-top: 5px;  
+            cursor: pointer;
+            margin-top: 5px;
             width: 22px;
+            margin-right: 5px;
           }
         }
       }

@@ -1,3 +1,4 @@
+import { CalendarioComponent } from './calendario/calendario.component';
 import { TabelaAdmComponent } from './tabela-adm/tabela-adm.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,7 +11,8 @@ import { HomeComponent } from './home/home.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    TabelaAdmComponent
+    TabelaAdmComponent,
+    CalendarioComponent
   ],
   imports: [
     BrowserModule,
