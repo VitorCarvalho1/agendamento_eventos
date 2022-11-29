@@ -1,65 +1,27 @@
 
-@media (min-width: 1080px) and (max-width: 1920px) { 
-  .field-name {
-    padding-left: 8px !important;
-    width: 450px !important;
-  }
-
-  .field-funcao {
-    width: 400px !important;
-  }
-  .field-instituicao {
-    width: 300px !important;
-  }
-  .align-icons  {
-    
-    img {
-      width: 390px !important;
-    }
-  }
-
-  .align-text {
-    width: 23px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1366px) {
-  .align-btn-back-and-new-user {
-    gap: 760px !important;
-  }
-}
-
+// @media (min-width: 768px) and (max-width: 1366px) {
+//   .align-btn-back-and-new-user {
+//     gap: 760px !important;
+//   }
+// }
 
 body {
   width: 100vw;
   height: 100vh;
 }
 
-
-
-
-.align-btn-back-and-new-user {
+.list-btn{
   display: flex;
   justify-content: space-around;
-  gap: 1160px;
-  width: 100%;
-  .align-back-to-home {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 25px;
-    .back-to-home, img {
+  gap: 640px;
+  margin-top: 25px;
+  li{
+    a{
       cursor: pointer;
       color: black;
     }
-  }
-  .align-new-user {
-    margin-top: 25px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    .new-user, img {
-      cursor: pointer;
+    .color-user{
+      color: white;
     }
   }
 }
@@ -74,28 +36,36 @@ body {
     width: 85%;
     thead {
       height: 35px;
-      background-color: var(--table-background);
-      .align-text {
-        text-align: left;
-        padding-top: 15px;
-        color: #ffffff;
-        font-weight: 600;
-        font-size: 14px;
-      }
-      .padding-th {
-        padding-left: 8px;
+      background-color: var(--color-primary);
+      tr {
+        th{
+          padding-left: 10px;
+          text-align: left;
+          padding-top: 15px;
+          color: var(--color-white);
+          font-weight: 600;
+          font-size: 14px;
+        }
       }
     }
     tbody {
       tr {
         td {
-          padding-top: 10px;
-          padding-bottom: 10px;
-          padding-left: 5px;
-          
+          height: 20px;
+          line-height: 45px;
+          padding-left: 10px;
+        }
+        td:nth-child(4){
+          width: 60px;
+          img {
+            cursor: pointer;
+            margin-top: 5px;
+            width: 22px;
+            margin-right: 5px;
+          }
         }
       }
-      .tuplas-table-background {
+      tr:nth-child(even){
         background-color: var(--table-background-tuplas);
       }
 }

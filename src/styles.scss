@@ -60,7 +60,7 @@ textarea{
 }
 
 
-:root{
+:root {
   --background-tabs: #ffffff;
   --green-title:  rgba(78, 169, 38, 0.65);
   --green-status: #5DE05B;
@@ -74,14 +74,11 @@ textarea{
   --line-bottom: #4EA926;
   --table-background: #14842D;
   --table-background-tuplas: rgba(78, 169, 38, 0.2);
-  --card-event: #14842D;
-  --card-variant: #DCE4D8;
-  --card-variant-2: #ffffff;
-  --pagination: #14842D;
-  --border-card:  rgba(0, 0, 0, 0.25);
+  --color-card-calendario: #DCE4D8;
+  --color-card-calendario2: #ffffff;
+  --color-black-style2:  rgba(0, 0, 0, 0.25);
   --background-top-card: rgba(145, 227, 109, 0.28);
   --background-btn-status: #5DE05B;
-
   --color-primary: #14842D;
 }
 
@@ -99,7 +96,7 @@ header{
             align-items: center;
             gap: 1rem;
             h1{
-                color: var(--green-title);
+                color: var(--color-secondary);
                 font-weight: bold;
                 font-size: 1.8rem;
             }
@@ -138,6 +135,7 @@ header{
 }
 
 .btn{
+    cursor: pointer;
     align-items: center;
     gap: 8px;
     line-height: 40px;
@@ -216,7 +214,7 @@ p{
     width: 100%;
     max-width: 382px;
     min-height: 373.33px;
-    border: 1px solid var(--border-card);
+    border: 1px solid var(--color-black-style2);
     border-radius: 8px;
 
     .card-header{

@@ -1,3 +1,4 @@
+import { CalendarioComponent } from './calendario/calendario.component';
 import { TabelaAdmComponent } from './tabela-adm/tabela-adm.component';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
@@ -7,10 +8,16 @@ import { CadEventosComponent } from './cad-eventos/cad-eventos.component';
 
 
 const routes: Routes = [
+<<<<<<< HEAD
     {path: '', component: HomeComponent},
     {path: 'tabela-adm', component: TabelaAdmComponent},
     {path: 'cad-eventos', component: CadEventosComponent},
     {path: 'cad-adm', component: CadAdmComponent}
+=======
+    {path: '',component: HomeComponent},
+    {path: 'tabela-adm',component: TabelaAdmComponent},
+    {path: 'calendario',component: CalendarioComponent}
+>>>>>>> 7e315ffef5ab1d73421ee139616be2710aafc329
 ]
 
 
