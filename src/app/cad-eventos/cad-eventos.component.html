@@ -1,0 +1,81 @@
+<header>
+    <div class="container">
+        <div class="imgHome">
+            <img src="./../../assets/logo.png" alt="logo-fnst">
+            <h1>Cadastro Eventos</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a routerLink="/"><img src="assets/home.svg">Home</a></li>
+                <li><a routerLink="/tabela-adm"><img src="assets/usuario.svg">Usuários</a></li>
+                <li><a routerLink="/"><img src="assets/historico.svg">Histórico alteração</a></li>
+                <li><a routerLink="/"><img src="assets/calendario.svg">Calendário</a></li>
+                <li><a routerLink="/"><img src="assets/sair.svg">Sair</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<form>
+    <div class="campo">
+        <img src="../../assets/evento.svg">
+        <input id="nome" type="text" placeholder="Nome do Evento *" required>
+    </div>
+    <div class="campoDate">
+        <div class="campo">
+            <img src="../../assets/dataEvento.svg">
+            <input id="dataInicio" type="date" required>
+        </div>
+        <div class="campo">
+            <img src="../../assets/dataEvento.svg">
+            <input id="dataFim" type="date" required>
+        </div>
+    </div>
+    <div class="campoDate">
+        <div class="campo">
+            <img src="../../assets/hora.svg">
+            <input id="horaInicio" type="time" required>
+        </div>
+        <div class="campo">
+            <img src="../../assets/hora.svg">
+            <input id="horaFim" type="time" required>
+        </div>
+    </div>
+    <div class="campo">
+        <select id="tipoEventos">
+            <img src="../../assets/tipoEvento.svg">
+            <option value="valor1" selected>Tipo do Evento</option>
+            <option value="valor2">Valor 2</option>
+            <option value="valor3">Valor 3</option>
+        </select>
+    </div>
+    <div class="campo">
+        <img src="../../assets/anexo.svg">
+        <input id="Anexo" type="file" placeholder="Anexar arquivo *" required>
+    </div>
+    <div class="campo">
+        <img src="../../assets/lugar.svg">
+        <input id="local" type="text" placeholder="lugar do Evento *" required>
+    </div>
+    <div class="campo">
+        <img src="../../assets/descricao.svg">
+        <textarea style="resize: 278px" id="descricao" placeholder="Descrição do Evento *"></textarea>
+    </div>
+
+    <div id="img">
+        <label>Adicionar imagens</label>
+        <div class="card-body">
+            <div class="title">
+                <button class="btn-img" type="submit"><img src="assets/mais.svg"></button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-btn">
+        <button class="btn btn-primary" type="submit">Salvar</button>
+    </div>
+    <div class="form-btn1">
+        <button class="btn">Cancelar</button>
+    </div>
+</form>
