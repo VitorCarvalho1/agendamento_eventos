@@ -7,7 +7,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CadAdmComponent } from './cad-adm/cad-adm.component';
 import { CadEventosComponent } from './cad-eventos/cad-eventos.component';
-
+import { IonicModule, IonicRouteStrategy } from '@ionic/angular'
+import { RouteReuseStrategy } from '@angular/router';
+import { FormBuilder } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { CadEventosComponent } from './cad-eventos/cad-eventos.component';
   ],
   imports: [
     BrowserModule,
-    AppRountingModule
+    AppRountingModule,
+    IonicModule.forRoot(),
   ],
-  providers: [],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy}, FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

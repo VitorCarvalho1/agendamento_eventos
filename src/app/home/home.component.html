@@ -28,7 +28,7 @@
 
     <section class="s-cards">
       <div class="card" *ngFor="let card of agendamentos">
-        <div class="card-header">
+        <div (click)="openModal()" class="card-header">
           <div class="status-options">
             <span [ngClass]="{'status': true, 'status-andamento': card.status == 'Em andamento'}">{{card.status}}</span>
             <img src="assets/charm_menu-meatball.svg">
@@ -39,7 +39,7 @@
             <h6>{{card.title}}</h6>
             <img src="assets/edit-card.svg">
           </div>
-
+  
           <ul class="info">
             <li>
               <img src="assets/data.svg" alt="">
@@ -56,7 +56,7 @@
               </div>
             </li>
           </ul>
-
+  
           <div class="endereco">
             <p>{{card.endereco}}</p>
             <p>Ginásio entrada na porta dos fundos</p>
@@ -64,6 +64,8 @@
         </div>
       </div>
     </section>
+  
+    
   </div>
 </main>
 
