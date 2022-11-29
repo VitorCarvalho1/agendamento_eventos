@@ -5,6 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRountingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { CadAdmComponent } from './cad-adm/cad-adm.component';
+import { CadEventosComponent } from './cad-eventos/cad-eventos.component';
 
 
 @NgModule({
@@ -12,7 +14,9 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     HomeComponent,
     TabelaAdmComponent,
-    CalendarioComponent
+    CalendarioComponent,
+    CadAdmComponent,
+    CadEventosComponent
   ],
   imports: [
     BrowserModule,
