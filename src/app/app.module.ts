@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CadAdmComponent } from './cad-adm/cad-adm.component';
 import { CadEventosComponent } from './cad-eventos/cad-eventos.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    LoginComponent,
     TabelaAdmComponent,
     CalendarioComponent,
     CadAdmComponent,
