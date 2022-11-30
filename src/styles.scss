@@ -284,7 +284,7 @@ form{
 
     .campo{
         width: 100%;
-        max-width: 350px;
+        max-width: 300px;
         padding: 0px 16px;
         border-radius: 5px;
         border: 1px solid #ABABAB;
@@ -316,3 +316,12 @@ form{
     }
 
 }
+
+ion-modal {
+    &.modal {
+        --width: 518px;
+        --height: 618px;
+        --border-radius: 8px;
+    }
+}
+
