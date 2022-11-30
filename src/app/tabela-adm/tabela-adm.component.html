@@ -36,74 +36,11 @@
                   <th></th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>Nivea Martins da Costa</td>
-                  <td>Administrador</td>
-                  <td>FSNT</td>
-                  <td>
-                    <img src="assets/edit-tupla-table.svg">
-                    <img src="assets/remove-tupla-table.svg">
-                  </td>
-                </tr>
-                <tr>
-                  <td>Nivea Martins da Costa</td>
-                  <td>Administrador</td>
-                  <td>FSNT</td>
-                  <td>
-                    <img src="assets/edit-tupla-table.svg">
-                    <img src="assets/remove-tupla-table.svg">
-                  </td>
-                </tr>
-                <tr>
-                  <td>Nivea Martins da Costa</td>
-                  <td>Administrador</td>
-                  <td>FSNT</td>
-                  <td>
-                    <img src="assets/edit-tupla-table.svg">
-                    <img src="assets/remove-tupla-table.svg">
-                  </td>
-                </tr>
-                <tr>
-                  <td>Nivea Martins da Costa</td>
-                  <td>Administrador</td>
-                  <td>FSNT</td>
-                  <td>
-                    <img src="assets/edit-tupla-table.svg">
-                    <img src="assets/remove-tupla-table.svg">
-                  </td>
-                </tr>
-                <tr>
-                  <td>Nivea Martins da Costa</td>
-                  <td>Administrador</td>
-                  <td>FSNT</td>
-                  <td>
-                    <img src="assets/edit-tupla-table.svg">
-                    <img src="assets/remove-tupla-table.svg">
-                  </td>
-                </tr>
-                <tr>
-                  <td>Nivea Martins da Costa</td>
-                  <td>Administrador</td>
-                  <td>FSNT</td>
-                  <td>
-                    <img src="assets/edit-tupla-table.svg">
-                    <img src="assets/remove-tupla-table.svg">
-                  </td>
-                </tr>
-                <tr>
-                  <td>Nivea Martins da Costa</td>
-                  <td>Administrador</td>
-                  <td>FSNT</td>
-                  <td>
-                    <img src="assets/edit-tupla-table.svg">
-                    <img src="assets/remove-tupla-table.svg">
-                  </td>
-                </tr>
-                <tr>
-                  <td>Nivea Martins da Costa</td>
-                  <td>Administrador</td>
-                  <td>FSNT</td>
+              <tbody >
+                <tr *ngFor="let rows of tabela">
+                  <td>{{rows.nome}}</td>
+                  <td>{{rows.nomec}}</td>
+                  <td>{{rows.nome_ins}}</td>
                   <td>
                     <img src="assets/edit-tupla-table.svg">
                     <img src="assets/remove-tupla-table.svg">

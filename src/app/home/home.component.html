@@ -30,13 +30,13 @@
       <div class="card" *ngFor="let card of agendamentos">
         <div (click)="openModal()" class="card-header">
           <div class="status-options">
-            <span [ngClass]="{'status': true, 'status-andamento': card.status == 'Em andamento'}">{{card.status}}</span>
+            <span class="status status-andamento">Em andamento</span>
             <img src="assets/charm_menu-meatball.svg">
           </div>
         </div>
         <div class="card-body">
           <div class="title">
-            <h6>{{card.title}}</h6>
+            <h6>{{card.nome}}</h6>
             <img src="assets/edit-card.svg">
           </div>
   
@@ -44,21 +44,21 @@
             <li>
               <img src="assets/data.svg" alt="">
               <div class="text">
-                <p>{{card.data}}</p>
+                <p>{{card.data_inicio}}</p>
                 <span>Data</span>
               </div>
             </li>
             <li>
               <img src="assets/time.svg" alt="">
               <div class="text">
-                <p>{{card.horario_inicio}} - {{card.horario_fim}}</p>
+                <p>{{card.hora_inicio}} - {{card.hora_fim}}</p>
                 <span>Horário</span>
               </div>
             </li>
           </ul>
   
           <div class="endereco">
-            <p>{{card.endereco}}</p>
+            <p>{{card.descricao}}</p>
             <p>Ginásio entrada na porta dos fundos</p>
           </div>
         </div>

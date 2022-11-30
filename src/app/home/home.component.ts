@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CardComponent } from '../card/card.component';
 import { TabelaAdmComponent } from '../tabela-adm/tabela-adm.component';
+import { Evento } from './evento';
+import { EventoService } from './evento.service';
 
 @Component({
   selector: 'app-home',
@@ -10,41 +12,12 @@ import { TabelaAdmComponent } from '../tabela-adm/tabela-adm.component';
 })
 export class HomeComponent implements OnInit {
 
-  agendamentos = [
-    {
-      "status": "Em andamento",
-      "title": "FETECAgro 2022 2sementre",
-      "data": "16/11/2022",
-      "horario_inicio": "8h00",
-      "horario_fim": "22h00",
-      "endereco": "FATEC Pompéia"
-    },
-    {
-      "status": "Em andamento",
-      "title": "FETECAgro 2022 2sementre",
-      "data": "16/11/2022",
-      "horario_inicio": "8h00",
-      "horario_fim": "22h00",
-      "endereco": "FATEC Pompéia"
-    },
-    {
-      "status": "Em andamento",
-      "title": "FETECAgro 2022 2sementre",
-      "data": "16/11/2022",
-      "horario_inicio": "8h00",
-      "horario_fim": "22h00",
-      "endereco": "FATEC Pompéia"
-    },{
-      "status": "Em andamento",
-      "title": "FETECAgro 2022 2sementre",
-      "data": "16/11/2022",
-      "horario_inicio": "8h00",
-      "horario_fim": "22h00",
-      "endereco": "FATEC Pompéia"
-    }
-  ]
 
-  constructor(private modalController:ModalController) { }
+  
+
+  agendamentos:Evento[]=[];
+
+  constructor(private modalController:ModalController, private service: EventoService) { }
 
   async openModal() {
     const modal = await this.modalController.create({
@@ -57,6 +30,10 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.service.listarEvento().subscribe((event)=>{
+      this.agendamentos = event.result as Evento[]
+      console.log(this.agendamentos)
+    })
   }
   
 }
