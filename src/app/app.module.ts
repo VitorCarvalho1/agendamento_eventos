@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRountingModule } from './app.routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { CadAdmComponent } from './cad-adm/cad-adm.component';
 import { CadEventosComponent } from './cad-eventos/cad-eventos.component';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';

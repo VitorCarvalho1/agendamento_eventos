@@ -35,35 +35,39 @@ textarea{
     }
 }
 
-.campoDate{
-    display: flex;
-    gap: 15px;
-    width: 100%;
-    max-width: 420px;
-}
+form {
+    margin-top: 20px;
 
-.campoEvento{
-    width: 100%;
-    max-width: 385px;
-    padding: 0px 16px;
-    border-radius: 5px;
-    border: 1px solid #ABABAB;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 16px;
-
-    img{
-        width: 16px;
+    .campoDate{
+        display: flex;
+        gap: 15px;
+        width: 100%;
+        max-width: 420px;
     }
 
-    input{
+    .campoEvento{
         width: 100%;
-        border: none;
-        line-height: 40px;
+        max-width: 385px;
+        padding: 0px 16px;
+        border-radius: 5px;
+        border: 1px solid #ABABAB;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 16px;
 
-        &:focus{
-            outline: none;
+        img{
+            width: 16px;
+        }
+
+        input{
+            width: 100%;
+            border: none;
+            line-height: 40px;
+
+            &:focus{
+                outline: none;
+            }
         }
     }
 }
