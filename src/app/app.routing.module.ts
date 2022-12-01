@@ -7,7 +7,6 @@ import { CadAdmComponent } from './cad-adm/cad-adm.component';
 import { CadEventosComponent } from './cad-eventos/cad-eventos.component';
 import { LoginComponent } from './login/login.component';
 
-
 const routes: Routes = [
     {path: '',component: HomeComponent},
     {path: 'login',component: LoginComponent},

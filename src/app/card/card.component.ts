@@ -9,7 +9,7 @@ export class CardComponent implements OnInit {
 
   agendamentosModal = [
     {
-      "statusModal": "Em andamento",
+      "status": "Em andamento",
       "title": "FETECAgro 2022 2sementre",
       "data": "16/11/2022",
       "horario_inicio": "8h00",
@@ -17,7 +17,7 @@ export class CardComponent implements OnInit {
       "endereco": "FATEC Pompéia"
     },
     {
-      "statusModal": "Em andamento",
+      "status": "Em andamento",
       "title": "FETECAgro 2022 2sementre",
       "data": "16/11/2022",
       "horario_inicio": "8h00",
@@ -25,14 +25,14 @@ export class CardComponent implements OnInit {
       "endereco": "FATEC Pompéia"
     },
     {
-      "statusModal": "Em andamento",
+      "status": "Em andamento",
       "title": "FETECAgro 2022 2sementre",
       "data": "16/11/2022",
       "horario_inicio": "8h00",
       "horario_fim": "22h00",
       "endereco": "FATEC Pompéia"
     },{
-      "statusModal": "Em andamento",
+      "status": "Em andamento",
       "title": "FETECAgro 2022 2sementre",
       "data": "16/11/2022",
       "horario_inicio": "8h00",

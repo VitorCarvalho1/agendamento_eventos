@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Table } from './table';
+import { TableService } from './table.service';
 
 @Component({
   selector: 'app-tabela-adm',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabelaAdmComponent implements OnInit {
 
-  constructor() { }
+  tabela:Table[]=[]
+
+  constructor(private service: TableService) { }
 
   ngOnInit(): void {
+    this.service.listarTable().subscribe((event)=>{
+      this.tabela = event.result as Table[]
+      console.log(this.tabela)
+    })
   }
 
 }
