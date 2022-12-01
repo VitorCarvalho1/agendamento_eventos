@@ -1,0 +1,28 @@
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 51px;
+    justify-content: space-around;
+    text-align: -webkit-center;
+    padding-top: 51px;
+
+    a{
+        color: black;
+        margin: 15px;
+    }
+
+    .imgHome{
+        margin: 16px;
+        display: flex;
+        text-align: center;
+        gap: 18px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1{
+        color: var(--green-title);
+    }
+}
+

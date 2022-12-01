@@ -1,35 +1,23 @@
-<header>
-    <div class="container">
+<form>
+    <div id="esquerda-form">
+        <img id="imgLogin" src="../../assets/img-login.svg">
+    </div>
+    <div id="direita-form">
         <div class="imgHome">
             <img src="./../../assets/logo.png" alt="logo-fnst">
-            <h1>Cadastro Administradores</h1>
+            <h1>Login</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a routerLink="/"><img src="assets/home.svg">Home</a></li>
-                <li><a routerLink="/tabela-adm"><img src="assets/usuario.svg">Usuários</a></li>
-                <li><a routerLink="/"><img src="assets/historico.svg">Histórico alteração</a></li>
-                <li><a routerLink="/"><img src="assets/calendario.svg">Calendário</a></li>
-                <li><a routerLink="/"><img src="assets/sair.svg">Sair</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<form>
-    <img src="../../assets/img-login.svg">
-    <div class="campoLogin">
-        <img src="../../assets/nome.svg" alt="">
-        <input id="nome" type="text" placeholder="Nome *" required>
-    </div>
-    <div class="campoLogin">
-        <img src="../../assets/senha.svg" alt="">
-        <input id="senha" type="password" placeholder="Senha *" required>
-    </div>
-    <div>
-        <a href="#">Esqueceu a senha?</a>
-    </div>
-    <div class="form-btn">
+        <div class="campo">
+            <img src="../../assets/nome.svg" alt="">
+            <input id="nome" type="text" placeholder="Nome *" required>
+        </div>
+        <div class="campo">
+            <img src="../../assets/senha.svg" alt="">
+            <input id="senha" type="password" placeholder="Senha *" required>
+        </div>
+        <div>
+            <a href="#">Esqueceu a senha?</a>
+        </div>
         <button class="btn btn-primary" type="submit">Acessar</button>
     </div>
 </form>

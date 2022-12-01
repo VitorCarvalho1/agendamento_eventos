@@ -1,56 +1,51 @@
-
-
-  <header>
-    <div class="container">
-      <div class="imgHome">
-          <img src="./../../assets/logo.png" alt="logo-fnst">
-          <h1>Tabela Administradores</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a routerLink="/"><img src="assets/home.svg">Home</a></li>
-          <li><a routerLink="/tabela-adm"><img src="assets/usuario.svg">Usuários</a></li>
-          <li><a routerLink="/"><img src="assets/historico.svg">Histórico alteração</a></li>
-          <li><a routerLink="/calendario"><img src="assets/calendario.svg">Calendário</a></li>
-          <li><a routerLink="/"><img src="assets/sair.svg">Sair</a></li>
-        </ul>
-      </nav>
+<header>
+  <div class="container">
+    <div class="imgHome">
+      <img src="./../../assets/logo.png" alt="logo-fnst">
+      <h1>Tabela Administradores</h1>
     </div>
-  </header>
-    <div class="container">
-                <ul class="list-btn">
-                  <li>
-                    <a class="btn" routerLink="/"><img src="assets/voltar.svg">Voltar</a>
-                  </li>
-                  <li>
-                    <a routerLink="/cad-adm" class="btn btn-primary color-user"><img src="assets/user-table.svg">Novo</a>
-                  </li>
-                </ul>
-          <section class="align-table">
-            <table>
-              <thead>
-                <tr>
-                  <th>Nome</th>
-                  <th>Função</th>
-                  <th>Instituição</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody >
-                <tr *ngFor="let rows of tabela">
-                  <td>{{rows.nome}}</td>
-                  <td>{{rows.nomec}}</td>
-                  <td>{{rows.nome_ins}}</td>
-                  <td>
-                    <img src="assets/edit-tupla-table.svg">
-                    <img src="assets/remove-tupla-table.svg">
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
+    <nav>
+      <ul>
+        <li><a routerLink="/"><img src="assets/home.svg">Home</a></li>
+        <li><a routerLink="/tabela-adm"><img src="assets/usuario.svg">Usuários</a></li>
+        <li><a routerLink="/"><img src="assets/historico.svg">Histórico alteração</a></li>
+        <li><a routerLink="/calendario"><img src="assets/calendario.svg">Calendário</a></li>
+        <li><a routerLink="/login"><img src="assets/sair.svg">Sair</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="container">
+  <ul class="list-btn">
+    <li>
+      <a class="btn" routerLink="/"><img src="assets/voltar.svg">Voltar</a>
+    </li>
+    <li>
+      <a routerLink="/cad-adm" class="btn btn-primary color-user"><img src="assets/user-table.svg">Novo</a>
+    </li>
+  </ul>
+  <section class="align-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Função</th>
+          <th>Instituição</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rows of tabela">
+          <td>{{rows.nome}}</td>
+          <td>{{rows.nomec}}</td>
+          <td>{{rows.nome_ins}}</td>
+          <td>
+            <img src="assets/edit-tupla-table.svg">
+            <img src="assets/remove-tupla-table.svg">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-    </div>
-
-
-
+</div>
