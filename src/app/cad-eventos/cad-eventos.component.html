@@ -14,61 +14,70 @@
     </div>
 </header>
 
-<form>
-    <div class="campoEvento">
-        <img src="../../assets/evento.svg">
-        <input id="nome" type="text" placeholder="Nome do Evento *" required>
+<div class="container-eventos">
+  <div class="input-icon">
+    <input id="input-cad-eventos" type="text" placeholder="Nome do evento" required>
+    <img src="./../../assets/evento.svg">
+  </div>
+  <div class="align-input-eventos">
+    <div class="input-icon">
+      <input type="text" placeholder="Horário do inicio" required>
+      <img src="./../../assets/hora.svg">
     </div>
-    <div class="campoDate">
-        <div class="campoEvento">
-            <img src="../../assets/dataEvento.svg">
-            <input id="dataInicio" type="date" required>
-        </div>
-        <div class="campoEvento">
-            <img src="../../assets/dataEvento.svg">
-            <input id="dataFim" type="date" required>
-        </div>
+    <div class="input-icon">
+      <input type="text" placeholder="Horário do término" required>
+      <img src="./../../assets/hora.svg">
     </div>
-    <div class="campoDate">
-        <div class="campoEvento">
-            <img src="../../assets/hora.svg">
-            <input id="horaInicio" type="time" required>
-        </div>
-        <div class="campoEvento">
-            <img src="../../assets/hora.svg">
-            <input id="horaFim" type="time" required>
-        </div>
+    <div class="input-icon">
+      <select name="text" class="select" id="select">
+        <option selected disabled>Tipo do evento</option>
+        <option value="text">Visita</option>
+        <option value="text">Workshop</option>
+        <option value="text">Palestra</option>
+        <option value="text">Reunião</option>
+        <option value="text">Apresentação</option>
+      </select>
+      <img src="./../../assets/tipoEvento.svg">
     </div>
-    <div class="campoDate">
-        <div class="campoEvento">
-            <select id="tipoEventos">
-                <img src="../../assets/tipoEvento.svg">
-                <option value="valor1" selected>Tipo do Evento</option>
-                <option value="valor2">Valor 2</option>
-                <option value="valor3">Valor 3</option>
-            </select>
-        </div>
-        <div class="campoEvento">
-            <img src="../../assets/anexo.svg">
-            <input id="Anexo" type="file" placeholder="Anexar arquivo *" required>
-        </div>
-    </div>
-    <div class="campoEvento">
-        <img src="../../assets/lugar.svg">
-        <input id="local" type="text" placeholder="lugar do Evento *" required>
-    </div>
-    <div class="campoEvento">
-        <img src="../../assets/descricao.svg">
-        <textarea style="resize: 278px" id="descricao" placeholder="Descrição do Evento *"></textarea>
+    <div class="input-icon">
+      <input type="text" placeholder="Data do inicio" required>
+      <img src="./../../assets/dataEvento.svg">
     </div>
 
-    <div id="AddImg">
-        <label>Adicionar imagens</label>
-        <input type="file" name="arquivos" accept="image/png, image/jpeg"  multiple />
-    </div>
+      <label for="arquivo">Anexar arquivo
+        <img class="icon-file" src="./../../assets/anexo.svg">
+      </label>
+      <input type="file" name="arquivo" id="arquivo" >
 
-    <div class="btn-evento">
-        <button class="btn btn-primary" type="submit">Salvar</button>
-        <button class="btn">Cancelar</button>
-    </div>
-</form>
+      <div class="input-icon">
+        <input class="lugar-input" type="text" placeholder="Lugar do evento" required>
+        <img src="./../../assets/lugar.svg">
+      </div>
+      <div class="input-icon">
+        <textarea placeholder="Descrição" id="descricao" cols="60" rows="5"></textarea>
+        <img src="./../../assets/descricao.svg">
+      </div>
+      <span>Adicionar imagens</span>
+
+      <div class="inputs-img">
+
+        <label for="img1"><img src="./../../assets/mais.svg"></label>
+        <input type="file" name="img1" id="img1">
+
+        <label for="img2"><img src="./../../assets/mais.svg"></label>
+        <input type="file" name="img2" id="img2">
+
+        <label for="img3"><img src="./../../assets/mais.svg"></label>
+        <input type="file" name="img3" id="img3">
+
+        <label for="img4"><img src="./../../assets/mais.svg"></label>
+        <input type="file" name="img4" id="img4">
+      </div>
+
+      <div class="align-btn-cad-eventos1">
+        <button>Cancelar</button>
+        <button  class="btn btn-primary">Salvar</button>
+      </div>
+  </div>
+
+</div>

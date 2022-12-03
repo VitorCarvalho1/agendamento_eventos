@@ -15,24 +15,8 @@
     flex-direction: column;
     justify-content: center;
     gap: 32px;
-    .input-icon {
-      position: relative;
-      input{
-        height: 42px;
-        width: 200px;
-        padding-left: 40px;
-        border-radius: 5px;
-        border: 1px solid grey;
-      }
-      input:focus {
-        outline: none;
-      }
-      img {
-        position: absolute;
-        left: 15px;
-        top: 17px;
-      }
-    }
+
+    
 
     button {
       border: none;
