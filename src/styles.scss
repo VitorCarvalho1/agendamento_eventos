@@ -93,6 +93,10 @@ header{
             display: flex;
             align-items: center;
             gap: 1rem;
+            img {
+              width: 70px;
+              height: 70px;
+            }
             h1{
                 color: var(--green-title);
                 font-weight: bold;
