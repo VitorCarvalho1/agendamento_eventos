@@ -33,15 +33,15 @@ const ImageController = require("./controllers/ImageController");
 //Usuários----
 router.get('/users', UserController.getAll);
 router.get('/user/:email', UserController.getById);
-router.post('/user', login.required,UserController.addUser);
+router.post('/user', /*login.required,*/UserController.addUser);
 router.put('/user/:email', login.required,UserController.updateUser);
-router.delete('/user/:email', login.required,UserController.delUser);
+router.delete('/user/:email', /*login.required*/UserController.delUser);
 router.post('/login', UserController.login);
 
 //Eventos----
 router.get('/events', EventController.getAllEvents)
 router.get('/events/:id_evento', EventController.getEventById)
-router.post('/events', login.required,EventController.addEvent);
+router.post('/events', EventController.addEvent);
 router.put('/events/:id_evento', login.required,EventController.updateEvent);
 router.delete('/events/:id_evento', login.required,EventController.delEvent);
 

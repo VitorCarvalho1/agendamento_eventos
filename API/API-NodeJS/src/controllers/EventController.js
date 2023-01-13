@@ -24,43 +24,42 @@ module.exports = {
     addEvent: async(req, res) =>{
         let json = {error:'', result:{}};
         
-        let id = req.body.id_evento;
+        //let id = req.body.id_evento;
             
         let nome = req.body.nome;
         
         let descricao = req.body.descricao;
         
-        let instituicao = req.body.instituicao_id_instituicao;
+         //let instituicao = req.body.instituicao_id_instituicao;
 
-        let lugar = req.body.lugar_id_lugar;     
+         //let lugarId = req.body.lugar_id_lugar;     
         
-        let tipo = req.body.fk_id_tipo;
-    
+        let lugar = req.body.lugar
+
+        // let tipo = req.body.fk_id_tipo;
+
+        let tipo = req.body.tipo 
+
         let data_inicio = req.body.data_inicio;
 
-        let data_fim = req.body.data_fim;
+        // let data_fim = req.body.data_fim;
 
         let hora_inicio = req.body.hora_inicio;
         
         let hora_fim = req.body.hora_fim;
         
-
-       
         try{
-            await EventService.addEvent(id, nome, descricao, instituicao, lugar, tipo, data_inicio, data_fim, hora_inicio, hora_fim);
+            await EventService.addEvent(/*id*/nome, descricao, lugar, tipo,data_inicio, /*data_fim*/ hora_inicio, hora_fim);
             json.result = {
-                id,
+                //id,
                 nome,
                 data_inicio,
-                data_fim,
+                // data_fim,
                 hora_inicio,
                 hora_fim,
                 descricao,
-                instituicao,
                 lugar,
                 tipo
-                
-                
             };
         }catch(error){
             console.log(error)
@@ -77,10 +76,12 @@ module.exports = {
         
         let descricao = req.body.descricao;
         
-        let instituicao = req.body.instituicao_id_instituicao;
+        // let instituicao = req.body.instituicao_id_instituicao;
 
-        let lugar = req.body.lugar_id_lugar; 
+        // let lugarId = req.body.lugar_id_lugar; 
         
+        let lugar1 = req.body.lugar1
+
         let tipo = req.body.fk_id_tipo;
 
         let data_inicio = req.body.data_inicio;
@@ -91,12 +92,8 @@ module.exports = {
         
         let hora_fim = req.body.hora_fim;
         
-        
-        
-
-       
         try{
-            await EventService.updateEvent(id, nome, descricao, instituicao, lugar, tipo, data_inicio, data_fim, hora_inicio, hora_fim);
+            await EventService.updateEvent(id, nome, descricao, lugar1, tipo, data_inicio, data_fim, hora_inicio, hora_fim);
             json.result = {
                 id,
                 nome,
@@ -105,8 +102,7 @@ module.exports = {
                 hora_inicio,
                 hora_fim,
                 descricao,
-                instituicao,
-                lugar,
+                lugar1,
                 tipo
             };
         }catch(error){

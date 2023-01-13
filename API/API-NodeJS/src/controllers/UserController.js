@@ -8,6 +8,7 @@ module.exports = {
         let json = {error:'', result:[]};
 
         let users = await UserService.getAll();
+        console.log(users)
         if(users){
             json.result = users;
         }
@@ -34,24 +35,24 @@ module.exports = {
         
         let nome = req.body.nome;
         
-        let cargo = req.body.cargo_id;
-        
-        let instituicao = req.body.instituicao_id;
+        let instituicao = req.body.instituicao;
 
-        let adm = req.body.adm_geral;
+        let cargo = req.body.cargo
+        
         
        
 
         try{
             const hashedPassword = await bcrypt.hash(senha, 8)
-            await UserService.addUser(email, hashedPassword, nome, cargo, instituicao, adm);
+            await UserService.addUser(email, hashedPassword, nome, cargo, instituicao);
             json.result = {
                 email,
                 nome,
                 senha,
                 cargo,
                 instituicao,
-                adm
+                
+                
                 
                 
             };

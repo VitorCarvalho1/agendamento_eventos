@@ -42,7 +42,7 @@
             <li>
               <img src="../../assets/data.svg" alt="">
               <div class="text">
-                <p>{{card.data_inicio}}</p>
+                <p>{{card.data_inicio | date:"dd/MM/yyyy"}}</p>
                 <span>Data</span>
               </div>
             </li>
@@ -57,7 +57,7 @@
 
           <div class="endereco">
             <p>{{card.descricao}}</p>
-            <p>Ginásio entrada na porta dos fundos</p>
+            
           </div>
         </div>
       </div>

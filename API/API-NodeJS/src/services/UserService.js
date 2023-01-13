@@ -3,9 +3,7 @@ const db = require('../db');
 module.exports = {
     getAll: ()=>{
         return new Promise((aceito, rejeitado)=>{
-            db.query(`SELECT * FROM usuario
-                INNER JOIN cargo ON cargo.id = usuario.cargo_id
-                INNER JOIN instituicao ON instituicao.id_instituicao = usuario.instituicao_id`, (error, results)=>{
+            db.query(`select nome, email, cargo, instituicao from usuario;`, (error, results)=>{
                 if(error) { rejeitado(error); return;}
                 aceito(results);
             });
@@ -28,12 +26,12 @@ module.exports = {
         })
     },
 
-    addUser: (email, hashedPassword, nome, cargo, instituicao, adm) =>{
+    addUser: (email, hashedPassword, nome, cargo, instituicao) =>{
         return new Promise(async (aceito, rejeitado)=>{
     
 
-            db.query('INSERT INTO usuario (email,senha,nome,cargo_id, instituicao_id, adm_geral) VALUES(?,?,?,?,?,?)', 
-                [email, hashedPassword, nome, cargo, instituicao, adm], (error, results)=>{
+            db.query('INSERT INTO usuario (email,senha,nome,cargo, instituicao) VALUES(?,?,?,?,?)', 
+                [email, hashedPassword, nome, cargo, instituicao], (error, results)=>{
                     if(error) { rejeitado(error); return; }
                     aceito(results.insertId);
               

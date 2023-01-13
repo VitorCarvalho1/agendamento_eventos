@@ -33,11 +33,11 @@
       <tbody>
         <tr *ngFor="let rows of tabela">
           <td>{{rows.nome}}</td>
-          <td>{{rows.nomec}}</td>
-          <td>{{rows.nome_ins}}</td>
+          <td>{{rows.cargo}}</td>
+          <td>{{rows.instituicao}}</td>
           <td>
             <img src="assets/edit-tupla-table.svg">
-            <img src="assets/remove-tupla-table.svg">
+            <img (click)="deletar(rows.email)" src="assets/remove-tupla-table.svg">
           </td>
         </tr>
       </tbody>

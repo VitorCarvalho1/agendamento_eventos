@@ -14,30 +14,27 @@
     </div>
 </header>
 
-<form>
+<form [formGroup]="inputsCadAdm" (submit)="enviarDadosUsuarios()">
     <div class="campo">
         <img src="../../assets/nome.svg" alt="">
-        <input id="nome" type="text" placeholder="Nome *" required>
+        <input formControlName="nome" id="nome" type="text" placeholder="Nome *" required>
     </div>
     <div class="campo">
         <img src="../../assets/email.svg" alt="">
-        <input id="email" type="text" placeholder="E-mail *" required>
+        <input formControlName="email" id="email" type="text" placeholder="E-mail *" required>
     </div>
     <div class="campo">
         <img src="../../assets/senha.svg" alt="">
-        <input id="senha" type="password" placeholder="Senha *" required>
+        <input formControlName="senha" id="senha" type="password" placeholder="Senha *" required>
     </div>
-    <div class="campo">
-        <img src="../../assets/senha.svg" >
-        <input id="senha" type="password" placeholder="Confirma Senha *" required>
-    </div>
+    
     <div class="campo">
         <img src="../../assets/instituicao.svg" >
-        <input id="instituicao" type="text" placeholder="Instituição *" required>
+        <input formControlName="instituicao" id="instituicao" type="text" placeholder="Instituição *" required>
     </div>
     <div class="campo">
         <img src="../../assets/cargo.svg"   >
-        <input id="cargo" type="text" placeholder="Cargo *" required>
+        <input formControlName="cargo" id="cargo" type="text" placeholder="Cargo *" required>
     </div>
     <div class="form-btn">
         <button class="btn btn-primary" type="submit">Salvar</button>

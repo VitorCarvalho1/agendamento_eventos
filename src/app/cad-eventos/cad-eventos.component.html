@@ -14,33 +14,33 @@
     </div>
 </header>
 
-<div class="container-eventos">
+<form [formGroup]="inputsCadEvent" (submit)="enviarDados()" class="container-eventos">
   <div class="input-icon">
-    <input id="input-cad-eventos" type="text" placeholder="Nome do evento" required>
+    <input formControlName="nome" id="input-cad-eventos" type="text" placeholder="Nome do evento" required>
     <img src="./../../assets/evento.svg">
   </div>
   <div class="align-input-eventos">
     <div class="input-icon">
-      <input type="text" placeholder="Horário do inicio" required>
+      <input formControlName="hora_inicio" type="text" placeholder="Horário do inicio" required>
       <img src="./../../assets/hora.svg">
     </div>
     <div class="input-icon">
-      <input type="text" placeholder="Horário do término" required>
+      <input formControlName="hora_fim" type="text" placeholder="Horário do término" required>
       <img src="./../../assets/hora.svg">
     </div>
     <div class="input-icon">
-      <select name="text" class="select" id="select">
-        <option selected disabled>Tipo do evento</option>
-        <option value="text">Visita</option>
-        <option value="text">Workshop</option>
-        <option value="text">Palestra</option>
-        <option value="text">Reunião</option>
-        <option value="text">Apresentação</option>
+      <select name="text" formControlName="tipo" class="select" id="select">
+        <option value="">Tipo do evento</option>
+        <option value="Visita">Visita</option>
+        <option value="Workshop">Workshop</option>
+        <option value="Palestra">Palestra</option>
+        <option value="Reunião">Reunião</option>
+        <option value="Apresentação">Apresentação</option>
       </select>
       <img src="./../../assets/tipoEvento.svg">
     </div>
     <div class="input-icon">
-      <input type="text" placeholder="Data do inicio" required>
+      <input formControlName="data_inicio" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Data do inicio" required>
       <img src="./../../assets/dataEvento.svg">
     </div>
 
@@ -50,11 +50,12 @@
       <input type="file" name="arquivo" id="arquivo" >
 
       <div class="input-icon">
-        <input class="lugar-input" type="text" placeholder="Lugar do evento" required>
+        <input class="lugar-input" formControlName="lugar" type="text" placeholder="Lugar do evento" required>
         <img src="./../../assets/lugar.svg">
       </div>
+
       <div class="input-icon">
-        <textarea placeholder="Descrição" id="descricao" cols="60" rows="5"></textarea>
+        <textarea formControlName="descricao" placeholder="Descrição" id="descricao" cols="55" rows="5"></textarea>
         <img src="./../../assets/descricao.svg">
       </div>
       <span>Adicionar imagens</span>
@@ -75,9 +76,8 @@
       </div>
 
       <div class="align-btn-cad-eventos1">
-        <button>Cancelar</button>
-        <button  class="btn btn-primary">Salvar</button>
+        <button (click)="cancelar()">Cancelar</button>
+        <button  (click)="vazio()" class="btn btn-primary">Salvar</button>
       </div>
   </div>
-
-</div>
+</form>
